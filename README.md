@@ -12,19 +12,20 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website">
+  <a href="https://github.com/EngineerShawn/Engineer-Patterson-Portfolio">
     <img src="images/ep-logo.png" alt="Logo" width="512" height="119.5">
   </a>
 
-<h3 align="center"Engineer Patterson | Portfolio</h3>
+<h3 align="center">Engineer Patterson | Portfolio</h3>
 
   <p align="center">
-    The Portfolio Website of Engineer Patterson. Where you can view his projects and even contact him!
+    The Portfolio Website of Engineer Patterson. <br> Where you can view his projects and even contact him!
     <br />
     ·
-    <a href="https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website/issues">Report Bug</a>
+    <br>
+    <a href="https://github.com/EngineerShawn/Engineer-Patterson-Portfolio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website/issues">Request Feature</a>
+    <a href="https://github.com/EngineerShawn/Engineer-Patterson-Portfolio/issues">Request Feature</a>
   </p>
 </div>
 
@@ -81,7 +82,7 @@
 
 
 
-See the [open issues](https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/EngineerShawn/Engineer-Patterson-Portfolio/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,17 +90,17 @@ See the [open issues](https://github.com/BountyFiveO/Engineer-Patterson__New-Por
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website](https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website)
+Project Link: [https://github.com/EngineerShawn/Engineer-Patterson-Portfolio](https://github.com/EngineerShawn/Engineer-Patterson-Portfolio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stars-shield]: https://img.shields.io/github/stars/BountyFiveO/Engineer-Patterson__New-Portfolio-Website.svg?style=for-the-badge
-[stars-url]: https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website/stargazers
-[issues-shield]: https://img.shields.io/github/issues/BountyFiveO/Engineer-Patterson__New-Portfolio-Website.svg?style=for-the-badge
-[issues-url]: https://github.com/BountyFiveO/Engineer-Patterson__New-Portfolio-Website/issues
+[stars-shield]: https://img.shields.io/github/stars/EngineerShawn/Engineer-Patterson-Portfolio.svg?style=for-the-badge
+[stars-url]: https://github.com/EngineerShawn/Engineer-Patterson-Portfolio/stargazers
+[issues-shield]: https://img.shields.io/github/issues/EngineerShawn/Engineer-Patterson-Portfolio.svg?style=for-the-badge
+[issues-url]: https://github.com/EngineerShawn/Engineer-Patterson-Portfolio/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/engineerpatterson/
 [product-screenshot]: images/screenshot.png
