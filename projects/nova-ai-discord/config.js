@@ -7,8 +7,7 @@ module.exports = {
     prefix: "/", //Bot Prefix
     owners: ["915420974873210890"], //Bot Onwer ID
     maintenance: false,
-    postgresUrl:
-      process.env.DATABASE_URL, 
+    postgresUrl: process.env.DATABASE_URL, 
     invite:
       "https://discord.com/api/oauth2/authorize?client_id=1172432649307037787&permissions=8&redirect_uri=https%3A%2F%2Fnovaai.engineerpatterson.com%2Foauth2%2Fcallback&response_type=code&scope=identify%20email%20connections%20guilds%20guilds.join%20guilds.members.read%20bot%20webhook.incoming%20messages.read%20applications.builds.read%20applications.commands%20applications.store.update%20applications.entitlements", //Link Invite Bot
     bot_add_description:

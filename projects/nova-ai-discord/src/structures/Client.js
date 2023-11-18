@@ -67,7 +67,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
   //=================== F U N C T I O N ===================
   async start() {
     const dbl = new dblist("API", this);
-    const { init } = require("./mongoose");
+    const { init } = require("./postgres");
     require("./verifyConfig")(this.config);
     init();
     super.login(bot.token);
