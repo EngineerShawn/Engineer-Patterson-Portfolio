@@ -151,11 +151,6 @@ app.get('/oauth2/callback', async (req, res) => {
     }
 });
 
-app.get('/', (request, response) => {
-    return response.sendFile('./index.html', { root: '.' });
-
-});
-
 app.listen(port, () => logger.info(`Server is running on port ${port}`));
 
 client.once('ready', () => {
