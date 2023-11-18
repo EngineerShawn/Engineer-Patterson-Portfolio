@@ -46,6 +46,8 @@ function createDiscordAuthUrl(clientId, redirectUri, state, scope = ['identify',
     return `${baseUrl}?${urlParams}`;
 }
 
+client.login(process.env.NOVA_BOT_TOKEN);
+
 // Redirect to Discord for OAuth
 app.get('/login', (req, res) => {
     const discordAuthUrl = createDiscordAuthUrl(
@@ -156,8 +158,6 @@ app.listen(port, () => logger.info(`Server is running on port ${port}`));
 client.once('ready', () => {
     console.log('NovaAI is Online!');
 });
-
-client.login(process.env.NOVA_BOT_TOKEN);
 
 // Export for testing purposes
 module.exports = app;
