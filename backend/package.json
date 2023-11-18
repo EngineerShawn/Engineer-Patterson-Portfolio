@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "npm install",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

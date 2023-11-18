@@ -69,10 +69,7 @@ module.exports = {
           .replace("BUGHUNTER_LEVEL_2", `${emoji.hunter_gold} BugHunter Gold`)
           .replace("BUGHUNTER_LEVEL_1", `${emoji.hunter} BugHunter`)
           .replace("EARLY_SUPPORTER", `${emoji.support} Early Supporter`)
-          .replace(
-            "VERIFIED_DEVELOPER",
-            `${emoji.developers} Verified Developer`
-          )
+          .replace("VERIFIED_DEVELOPER", `${emoji.developers} Verified Developer`)
       );
     });
 
