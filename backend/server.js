@@ -2,6 +2,8 @@ const express = require('express');
 const axios = require('axios');
 const { Pool } = require('pg');
 const winston = require('winston');
+const { Client, GatewayIntentBits } = require('discord.js');
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 require('dotenv').config({path: '../.env'});
 
 // Logging Setup
@@ -154,7 +156,7 @@ app.get('/', (request, response) => {
 
 });
 
-app.listen(port, () => console.log(`NovaAI is listening on http://localhost:${port}`));
+app.listen(port, () => logger.info(`Server is running on port ${port}`));
 
 client.once('ready', () => {
     console.log('NovaAI is Online!');
