@@ -1,4 +1,5 @@
 const path = require('path');
+require('../../backend/server').config();
 require('dotenv').config({path: '../../.env'});
 module.exports = {
   bot: {
