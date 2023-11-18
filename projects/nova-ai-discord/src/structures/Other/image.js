@@ -40,7 +40,7 @@ module.exports = {
     ctx.font = "32px sans serif";
     ctx.fillStyle = "#ffffff";
     ctx.fillText(`You are the ${member.guild.memberCount}th`, 512, 455);
-    ctx.fillText("DGH BOT", 512, 485);
+    ctx.fillText("NOVA AI", 512, 485);
     ctx.beginPath();
     ctx.arc(512, 166, 119, 0, Math.PI * 2, true);
     ctx.closePath();

@@ -63,7 +63,7 @@ module.exports = {
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
           .setTitle(
-            (await client.emoji("DGH_success")) + " Welcome Message Seted!"
+            (await client.emoji("NOVA_success")) + " Welcome Message Seted!"
           )
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {
@@ -123,7 +123,7 @@ module.exports = {
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
           .setTitle(
-            (await client.emoji("DGH_success")) + " Leave Message Seted!"
+            (await client.emoji("NOVA_success")) + " Leave Message Seted!"
           )
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {
@@ -176,7 +176,7 @@ module.exports = {
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
           .setTitle(
-            (await client.emoji("DGH_success")) + " Level Message Seted!"
+            (await client.emoji("NOVA_success")) + " Level Message Seted!"
           )
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {
@@ -231,7 +231,7 @@ module.exports = {
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
           .setTitle(
-            (await client.emoji("DGH_success")) + " Badword Message Seted!"
+            (await client.emoji("NOVA_success")) + " Badword Message Seted!"
           )
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {

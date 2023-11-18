@@ -39,7 +39,7 @@ module.exports = {
 
     let noResult = new discord.MessageEmbed()
       .setDescription(
-        `| ${await client.emoji("DGH_error")} No Results found for ${args.join(
+        `| ${await client.emoji("NOVA_error")} No Results found for ${args.join(
           " "
         )}!`
       )
@@ -113,7 +113,7 @@ module.exports = {
           .setColor("00FFFF")
           .setDescription(
             `${await client.emoji(
-              "DGH_success"
+              "NOVA_success"
             )} Successfully added ${created}!`
           );
 

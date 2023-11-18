@@ -17,7 +17,7 @@ module.exports = {
 
     if (message.guild.me.roles.highest.comparePositionTo(role) < 0) {
       return client.send(
-        `${await client.emoji("DGH_error")} My role is not high enough than **${
+        `${await client.emoji("NOVA_error")} My role is not high enough than **${
           role.name
         }** role!`,
         { message }
@@ -26,7 +26,7 @@ module.exports = {
 
     if (message.member.roles.highest.comparePositionTo(role) < 0) {
       return client.send(
-        `${await client.emoji("DGH_error")} Your role must be higher than **${
+        `${await client.emoji("NOVA_error")} Your role must be higher than **${
           role.name
         }** role!`,
         { message }
@@ -35,7 +35,7 @@ module.exports = {
 
     if (!role) {
       return client.send(
-        (await client.emoji("DGH_info")) + "Please provide a valid role",
+        (await client.emoji("NOVA_info")) + "Please provide a valid role",
         { message }
       );
     }
@@ -68,7 +68,7 @@ module.exports = {
         msg.delete();
 
         return client.send(
-          `${await client.emoji("DGH_success")} Successfully Delete **${
+          `${await client.emoji("NOVA_success")} Successfully Delete **${
             role.name
           }** to Members`,
           { message }
@@ -80,7 +80,7 @@ module.exports = {
           .map(a => a.roles.remove(role));
         msg.delete();
         return client.send(
-          `${await client.emoji("DGH_success")} Successfully Delete **${
+          `${await client.emoji("NOVA_success")} Successfully Delete **${
             role.name
           }** to Bots`,
           { message }

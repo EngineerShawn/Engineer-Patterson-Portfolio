@@ -15,19 +15,19 @@ module.exports = {
     const category = new Discord.Collection();
     const menus = [];
     const c_cmd = {
-      fun: await client.emoji("DGH_fun"),
-      utility: await client.emoji("DGH_util"),
-      info: await client.emoji("DGH_info"),
-      levels: await client.emoji("DGH_level_up"),
-      admin: await client.emoji("DGH_admin"),
-      settings: await client.emoji("DGH_setting"),
-      moderation: await client.emoji("DGH_mod"),
-      misc: await client.emoji("DGH_misc"),
-      games: await client.emoji("DGH_games"),
-      search: await client.emoji("DGH_search"),
-      custom: await client.emoji("DGH_add"),
-      slash: await client.emoji("DGH_SLASH_CMD"),
-      backup: await client.emoji("DGH_backup"),
+      fun: await client.emoji("NOVA_fun"),
+      utility: await client.emoji("NOVA_util"),
+      info: await client.emoji("NOVA_info"),
+      levels: await client.emoji("NOVA_level_up"),
+      admin: await client.emoji("NOVA_admin"),
+      settings: await client.emoji("NOVA_setting"),
+      moderation: await client.emoji("NOVA_mod"),
+      misc: await client.emoji("NOVA_misc"),
+      games: await client.emoji("NOVA_games"),
+      search: await client.emoji("NOVA_search"),
+      custom: await client.emoji("NOVA_add"),
+      slash: await client.emoji("NOVA_SLASH_CMD"),
+      backup: await client.emoji("NOVA_backup"),
       anti_swear: "🤬"
     };
     readdirSync("./src/commands/").forEach(dir => {
@@ -195,11 +195,11 @@ module.exports = {
       .setThumbnail(client.user.displayAvatarURL())
       .setDescription(
         `**TYPE Recommends for full list of commands\n${await client.emoji(
-          "DGH_arrow"
+          "NOVA_arrow"
         )} [Support](${client.config.server.invite})\n${await client.emoji(
-          "DGH_arrow"
+          "NOVA_arrow"
         )} [Invite Me](${client.config.bot.invite})\n${await client.emoji(
-          "DGH_arrow"
+          "NOVA_arrow"
         )} [My Source](https://github.com/Sintya4/PREMIUM-DGH-BOT-V3)\n**`
       )
       .setImage(client.config.image.help)
@@ -241,7 +241,7 @@ module.exports = {
           .setTimestamp()
           .setDescription(
             `${await client.emoji(
-              "DGH_owner_guild"
+              "NOVA_owner_guild"
             )}**\`Owner\`** Command\n\`\`\`xl\n${prefix ||
               client.config.bot.prefix}help [Command]\n\`\`\``
           )

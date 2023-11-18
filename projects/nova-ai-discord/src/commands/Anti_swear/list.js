@@ -22,7 +22,7 @@ module.exports = {
         message.author.displayAvatarURL({ dynamic: true })
       );
     } else {
-      return client.send(await client.emoji("DGH_error") +" | **There are No words.**",{message});
+      return client.send(await client.emoji("NOVA_error") +" | **There are No words.**",{message});
     }
 
     return message.channel.send({ embeds: [embed] });

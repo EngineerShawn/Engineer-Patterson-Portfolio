@@ -6,17 +6,17 @@ module.exports = {
   giveaway: async client => {
     return {
       giveaway: `@everyone\n${await client.emoji(
-        "DGH_React_Giveaway"
+        "NOVA_React_Giveaway"
       )} **GIVEAWAY** `,
       giveawayEnded: `@everyone\n${await client.emoji(
-        "DGH_React_Giveaway"
-      )} **GIVEAWAY ENDED** ${await client.emoji("DGH_React_Giveaway")}`,
+        "NOVA_React_Giveaway"
+      )} **GIVEAWAY ENDED** ${await client.emoji("NOVA_React_Giveaway")}`,
       timeRemaining: "Time remaining: **{duration}**!",
       inviteToParticipate: `React with ${await client.emoji(
-        "DGH_React_Giveaway"
+        "NOVA_React_Giveaway"
       )} to participate!`,
       winMessage: `${await client.emoji(
-        "DGH_React_Giveaway"
+        "NOVA_React_Giveaway"
       )} {winners} won **{this.prize}**!`,
       embedFooter: `{this.winnerCount} winner(s) • ${client.user.username}`,
       noWinner: "Giveaway cancelled, no valid participations.",

@@ -24,14 +24,14 @@ module.exports = {
           .then(async em =>
             client.send(
               `${await client.emoji(
-                "DGH_success"
+                "NOVA_success"
               )} Emoji Has Been Added! | Emoji : ${em.toString()}`,
               { message }
             )
           )
           .catch(async error => {
             client.send(
-              (await client.emoji("DGH_error")) + " | an Error occured",
+              (await client.emoji("NOVA_error")) + " | an Error occured",
               { message }
             );
           });

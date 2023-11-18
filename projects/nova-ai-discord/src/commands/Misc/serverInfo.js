@@ -16,7 +16,7 @@ module.exports = {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
     })
-        /*.join(`\n${await client.emoji("DGH_success")}: `)
+        /*.join(`\n${await client.emoji("NOVA_success")}: `)
         .replace(/animated_icon/gi, `Animated Icon`)
         .replace(/banner/gi, `Banner`)
         .replace(/commerce/gi, `Commerce`)
@@ -113,41 +113,41 @@ module.exports = {
       )
       .addField(
         `Presences:`,
-        `${await client.emoji("DGH_on")} ${onlineMembers} Online` +
-          `\n${await client.emoji("DGH_idle")} ${idleMembers} Idle` +
-          `\n${await client.emoji("DGH_dnd")} ${dndMembers} DND` +
-          `\n${await client.emoji("DGH_off")} ${offlineMembers} Offline`,
+        `${await client.emoji("NOVA_on")} ${onlineMembers} Online` +
+          `\n${await client.emoji("NOVA_idle")} ${idleMembers} Idle` +
+          `\n${await client.emoji("NOVA_dnd")} ${dndMembers} DND` +
+          `\n${await client.emoji("NOVA_off")} ${offlineMembers} Offline`,
         true
       )
       .addField(
         "Guild:",
         `:id: Guild: ${guildName}` +
-          `\n${(await client.emoji("DGH_create_at")) ||
+          `\n${(await client.emoji("NOVA_create_at")) ||
             "🕰️"} Created At: ${guildCreatedAt} (${guildCreatedAtFromNow})` +
-          `\n${(await client.emoji("DGH_owner_guild")) ||
+          `\n${(await client.emoji("NOVA_owner_guild")) ||
             "👑"} Owner: [${guildOwner}](https://discord.com/users/${
             message.guild.ownerId
           } 'ID: ${message.guild.ownerId}.` +
-          `\n${(await client.emoji("DGH_create_at")) || "🕰️"} Created At: ${
+          `\n${(await client.emoji("NOVA_create_at")) || "🕰️"} Created At: ${
             message.guild.members.cache.get(message.guild.ownerId).user
               .createdAt
           }')` +
-          `\n${(await client.emoji("DGH_afk")) ||
-            "⌨️"} AFK Channel: ${afkChannel}\n${(await client.emoji("DGH_boosts"))} Boost Tier: ${message.guild.premiumTier.toString()}\n${(await client.emoji("DGH_boosts"))} Boosts: ${message.guild.premiumSubscriptionCount}`,
+          `\n${(await client.emoji("NOVA_afk")) ||
+            "⌨️"} AFK Channel: ${afkChannel}\n${(await client.emoji("NOVA_boosts"))} Boost Tier: ${message.guild.premiumTier.toString()}\n${(await client.emoji("NOVA_boosts"))} Boosts: ${message.guild.premiumSubscriptionCount}`,
         true
       )
       .addField(
         "Server Features",
-        `${await client.emoji("DGH_success")}: **\`${guildFeatures.join(`\`**\n${await client.emoji("DGH_success")}: **\``)}\`**`,
+        `${await client.emoji("NOVA_success")}: **\`${guildFeatures.join(`\`**\n${await client.emoji("NOVA_success")}: **\``)}\`**`,
         true
       )
       .addField(
         "Misc",
-        `${await client.emoji("DGH_role")} ${roleSize} Roles` +
+        `${await client.emoji("NOVA_role")} ${roleSize} Roles` +
           `\n${channelSize} **Channels**:` +
-          `\n${await client.emoji("DGH_text")} ${textChannels} Text Channels` +
-          `\n${await client.emoji("DGH_vc")} ${voiceChannels} Voice Channels` +
-          `\n${(await client.emoji("DGH_emoji")) || "🙂"} ${emojiSize} Emojis`,
+          `\n${await client.emoji("NOVA_text")} ${textChannels} Text Channels` +
+          `\n${await client.emoji("NOVA_vc")} ${voiceChannels} Voice Channels` +
+          `\n${(await client.emoji("NOVA_emoji")) || "🙂"} ${emojiSize} Emojis`,
         true
       )
       .setFooter(client.user.username, client.user.displayAvatarURL())

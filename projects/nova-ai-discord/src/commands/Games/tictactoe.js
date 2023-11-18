@@ -7,9 +7,9 @@ module.exports = {
   description: "Let's play tictactoe",
   run: async (client, message, args) => {
     client.ops.tictactoe(client, message, {
-      xEmoji: await client.emoji("DGH_X_"),
-      oEmoji: await client.emoji("DGH_O_"),
-      idleEmoji: await client.emoji("DGH_line_")
+      xEmoji: await client.emoji("NOVA_X_"),
+      oEmoji: await client.emoji("NOVA_O_"),
+      idleEmoji: await client.emoji("NOVA_line_")
     })
   }
 };

@@ -13,14 +13,14 @@ module.exports = {
       .then(async () => {
         let cc = await client.awaitReply(
           `${await client.emoji(
-            "DGH_info"
+            "NOVA_info"
           )} | When the backup is loaded, all the channels, roles, etc. will be replaced! Type \`confirm\` to confirm!`,
           { message, time: 20000 }
         );
         if (!cc)
           return client.send(
             `${await client.emoji(
-              "DGH_error"
+              "NOVA_error"
             )} | Time's up! Cancelled backup loading!`,
             {
               message
@@ -31,7 +31,7 @@ module.exports = {
             .load(args[0], message.guild)
             .then(async () => {
               client.send(
-                `${await client.emoji("DGH_info")} | Start loading the backup!`,
+                `${await client.emoji("NOVA_info")} | Start loading the backup!`,
                 { message, type: true }
               );
             })
@@ -45,7 +45,7 @@ module.exports = {
       })
       .catch(async e => {
         return client.send(
-          `${await client.emoji("DGH_error")} | No backup found for ${args.slice(
+          `${await client.emoji("NOVA_error")} | No backup found for ${args.slice(
             0
           ).join(" ")}`,
           { message }

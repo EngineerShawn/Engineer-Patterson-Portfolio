@@ -9,7 +9,7 @@ module.exports = {
     const comment = args.join("");
     if (!comment)
       return client.send(
-        `${await client.emoji("DGH_error")} Provide something to Comment!`,
+        `${await client.emoji("NOVA_error")} Provide something to Comment!`,
         {message}
       );
     let yt = await canvacord.Canvas.youtube({

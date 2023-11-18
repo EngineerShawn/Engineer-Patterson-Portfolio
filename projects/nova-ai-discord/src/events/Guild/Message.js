@@ -14,7 +14,7 @@ module.exports = client => {
     const [, matchedPrefix] = message.content.match(prefixRegex);
     if (message.content == `<@${client.user.id}>`) {
       return client.send(
-        `Hey, I'm DGH BOT.\nMy current prefix is \`${Prefix}\``,
+        `Hey, I'm NOVA AI.\nMy current prefix is \`${Prefix}\``,
         { message, timeout: 20000 }
       );
     }
@@ -47,7 +47,7 @@ module.exports = client => {
     ) {
       let ownerOnly = new client.Discord.MessageEmbed().setDescription(
         `*${await client.emoji(
-          "DGH_error"
+          "NOVA_error"
         )} Command is in progress, you can't use cmd Now*`
       );
       return client.send(null, { embed: [ownerOnly], message });
@@ -57,7 +57,7 @@ module.exports = client => {
       if (client.config.bot.owners.includes(message.author.id) === false) {
         let ownerOnly = new client.Discord.MessageEmbed().setDescription(
           `*${await client.emoji(
-            "DGH_error"
+            "NOVA_error"
           )} Only Bot Developer can use this command!*`
         );
         return client.send(null, { embed: [ownerOnly], message });
@@ -148,7 +148,7 @@ module.exports = client => {
                 client.sendhook(null, {
                   channel: client.config.logs.boterror,
                   embed: [errrr],
-                  name: "Notifications DGH BOT"
+                  name: "Notifications NOVA AI"
                 });
 
                 setTimeout(() => m.delete(), 13000);
@@ -172,7 +172,7 @@ module.exports = client => {
             client.sendhook(null, {
               channel: client.config.logs.boterror,
               embed: [errrr],
-              name: "Notifications DGH BOT"
+              name: "Notifications NOVA AI"
             });
 
             setTimeout(() => m.delete(), 13000);

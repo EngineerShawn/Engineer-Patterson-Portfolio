@@ -38,7 +38,7 @@ module.exports = {
         }
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
-          .setTitle((await client.emoji("DGH_success")) + " Welcome Message!")
+          .setTitle((await client.emoji("NOVA_success")) + " Welcome Message!")
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {
           msg1 = msg1.replace(/{user}/g, message.author);
@@ -74,7 +74,7 @@ module.exports = {
         }
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
-          .setTitle((await client.emoji("DGH_success")) + " Leave Message")
+          .setTitle((await client.emoji("NOVA_success")) + " Leave Message")
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {
           msg1 = msg1.replace(/{user}/g, message.author);
@@ -106,7 +106,7 @@ module.exports = {
         }
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
-          .setTitle((await client.emoji("DGH_success")) + " Level Message")
+          .setTitle((await client.emoji("NOVA_success")) + " Level Message")
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {
           const User = await Levels.fetch(
@@ -142,7 +142,7 @@ module.exports = {
         }
         let embeds = new client.Discord.MessageEmbed()
           .setColor("#00FF00")
-          .setTitle((await client.emoji("DGH_success")) + " Badword Message")
+          .setTitle((await client.emoji("NOVA_success")) + " Badword Message")
           .setDescription(`Previous\n\`\`\`\n${msg1}\n\`\`\``);
         if (msg1) {
           msg1 = msg1.replace(/{user}/g, message.author);

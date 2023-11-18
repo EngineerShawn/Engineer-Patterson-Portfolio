@@ -20,7 +20,7 @@ module.exports = client => {
       ) {
         let ownerOnly = new client.Discord.MessageEmbed().setDescription(
           `*${await client.emoji(
-            "DGH_error"
+            "NOVA_error"
           )} Command is in progress, you can't use cmd Now*`
         );
         return interaction.reply({ embeds: [ownerOnly], ephemeral: true });
@@ -29,7 +29,7 @@ module.exports = client => {
         if (client.config.bot.owners.includes(interaction.user.id) === false) {
           let ownerOnly = new client.Discord.MessageEmbed().setDescription(
             `*${await client.emoji(
-              "DGH_error"
+              "NOVA_error"
             )} Only Bot Developer can use this command!*`
           );
           return interaction.reply({ embeds: [ownerOnly], ephemeral: true });
@@ -88,7 +88,7 @@ module.exports = client => {
             `Error Slash Command\n\`${e.message ? e.message : e}\``,
             {
               channel: client.config.logs.boterror,
-              name: "Notifications DGH BOT SLASH"
+              name: "Notifications NOVA AI SLASH"
             }
           );
           interaction.reply({
@@ -103,7 +103,7 @@ module.exports = client => {
         `Error Slash Command:\n\`${error.message ? error.message : error}\``,
         {
           channel: client.config.logs.boterror,
-          name: "Notifications DGH BOT SLASH"
+          name: "Notifications NOVA AI SLASH"
         }
       );
       interaction.reply({
@@ -127,7 +127,7 @@ module.exports = client => {
       await SelectEvent.execute(client, interaction).catch(e => {
         client.sendhook(`Error SELECTS:\n\`${e.message ? e.message : e}\``, {
           channel: client.config.logs.boterror,
-          name: "Notifications DGH BOT SELECTS"
+          name: "Notifications NOVA AI SELECTS"
         });
       });
     } catch (error) {
@@ -135,7 +135,7 @@ module.exports = client => {
         `Error SELECTS:\n\`${error.message ? error.message : error}\``,
         {
           channel: client.config.logs.boterror,
-          name: "Notifications DGH BOT SELECTS"
+          name: "Notifications NOVA AI SELECTS"
         }
       );
       interaction.followUp({
@@ -158,7 +158,7 @@ module.exports = client => {
       await buttonEvent.execute(client, interaction).catch(e => {
         client.sendhook(`Error BUTTON:\n\`${e.message ? e.message : e}\``, {
           channel: client.config.logs.boterror,
-          name: "Notifications DGH BOT BUTTONS"
+          name: "Notifications NOVA AI BUTTONS"
         });
       });
     } catch (error) {
@@ -166,7 +166,7 @@ module.exports = client => {
         `Error BUTTON:\n\`${error.message ? error.message : error}\``,
         {
           channel: client.config.logs.boterror,
-          name: "Notifications DGH BOT BUTTONS"
+          name: "Notifications NOVA AI BUTTONS"
         }
       );
       interaction.followUp({

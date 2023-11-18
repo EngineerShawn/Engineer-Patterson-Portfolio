@@ -8,7 +8,7 @@ module.exports = client => {
       .setThumbnail(songInfo.thumbnail)
       .setTitle("Now Playing!")
       .setDescription(
-        `${await client.emoji("DGH_music")} Now Playing: **${
+        `${await client.emoji("NOVA_music")} Now Playing: **${
           songInfo.title
         }\nChannel: \`${songInfo.author}\`**\nThis was requested by ${
           requester.tag
@@ -24,7 +24,7 @@ module.exports = client => {
       .setColor("RANDOM")
       .setThumbnail(songInfo.thumbnail)
       .setDescription(
-        `${await client.emoji("DGH_add")} Added the Song: **${
+        `${await client.emoji("NOVA_add")} Added the Song: **${
           songInfo.title
         }\nChannel: \`${songInfo.author}\`**\nAdded by ${requester.tag} (${
           requester.id
@@ -49,7 +49,7 @@ module.exports = client => {
     const AddEmbed = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setDescription(
-        `${await client.emoji("DGH_add")} Added the playlist: **${
+        `${await client.emoji("NOVA_add")} Added the playlist: **${
           playlist.title
         } with \`${
           playlist.videos.length

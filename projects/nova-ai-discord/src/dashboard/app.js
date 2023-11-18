@@ -5,9 +5,9 @@ module.exports = async (client) => {
   let cmd = [];
   let options = {
     description:
-      "DGH BOT is a multiple purpose bot including extraordinary features such as Moderation, Leveling System, Welcomer, Search, Misc and other commands!",
+      "NOVA AI is a multiple purpose bot including extraordinary features such as Moderation, Leveling System, Welcomer, Search, Misc and other commands!",
     image:
-      "https://media.discordapp.net/attachments/850346094520434720/908270754443976704/DGH_BOT_V3.png",
+      "https://media.discordapp.net/attachments/850346094520434720/908270754443976704/NOVA_BOT_V3.png",
   };
   client.commands.map((command) =>
     cmd.push({

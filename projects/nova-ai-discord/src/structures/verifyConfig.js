@@ -19,42 +19,38 @@ module.exports = config => {
   }
   if (authorization(config.bot.invite) === false) {
     error = true;
-    console.error("🟥 DGH BOT Source System: Give me the invite bot link");
+    console.error("🟥 NOVA AI Source System: NovaAI Invite link is missing");
   }
   if (!config.bot.prefix || config.bot.prefix.length > 5) {
     error = true;
-    console.error("🟥 DGH BOT Source System: Prefix can only be a maximum of 5");
+    console.error("🟥 NOVA AI Source System: Prefix can only be a maximum of 5");
   }
   if (!config.bot.owners.length === 1) {
     error = true;
-    console.error("🟥 DGH BOT Source System: Owner only maximum 2");
+    console.error("🟥 NOVA AI Source System: There are only allowed 2 Owners MAX");
   }
 
   if (!error) {
-    console.log("🟩 DGH BOT Source System: Config file verified!");
-    console.log("🟩 DGH BOT Source System: Loading...");
+    console.log("🟩 NOVA AI Source System: Config file has been verified!");
+    console.log("🟩 NOVA AI Source System: Loading...");
     console.log(
-      "🟩 DGH BOT Source System: Copyright 2021 © DGH BOT - SINTYA - FC GLITCH - Androz2091"
+      "🟩 NOVA AI Source System: Copyright 2023 © NOVA AI - Created By - Shawn Patterson - EngineerShawn"
     );
-    console.log("🟩 DGH BOT Source System: Pls Join My Server");
+    console.log("🟩 NOVA AI Source System: Please Join My Server");
     console.log("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
   }
   if (error) {
-    console.log("🟥 DGH BOT Source System: Config file not verified!");
-    console.log("🟥 DGH BOT Source System: Stop...");
+    console.log("🟥 NOVA AI Source System: Config file not verified!");
+    console.log("🟥 NOVA AI Source System: Stop...");
     console.log(
-      "🟥 DGH BOT Source System: Copyright 2021 © DGH BOT - SINTYA - FC GLITCH - Androz2091"
+      "🟥 NOVA AI Source System: Copyright 2023 © NOVA AI - Created By - Shawn Patterson - EngineerShawn"
     );
-    console.log("🟥 DGH BOT Source System: Pls Join My Server");
+    console.log("🟥 NOVA AI Source System: Pleas Join My Server");
     console.log("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
     return process.exit();
   }
 };
 function authorization(url) {
-  const botInvRegex = /(https?:\/\/)?(www\.|canary\.|ptb\.)?discord(app)?\.com\/(api\/)?oauth2\/authorize\?([^ ]+)\/?/gi;
-  if (botInvRegex.test(url)) {
-    return true;
-  } else {
-    return false;
-  }
+  const botInvRegex = /^https:\/\/discord\.com\/oauth2\/authorize$/;
+  return botInvRegex.test(url);
 }

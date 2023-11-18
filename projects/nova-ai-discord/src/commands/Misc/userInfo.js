@@ -41,19 +41,19 @@ module.exports = {
     badges = await badges.toArray();
 
     const emoji = {
-      brigade: await client.emoji("DGH_Employee"),
-      partner: await client.emoji("DGH_Partner"),
-      events: await client.emoji("DGH_hypesquad"),
-      brillance: await client.emoji("DGH_hypesquadbrillance"),
-      bravery: await client.emoji("DGH_hypesquadbravery"),
-      balance: await client.emoji("DGH_hypesquadbalance"),
-      hunter_gold: await client.emoji("DGH_huntergold"),
-      hunter: await client.emoji("DGH_hunter"),
-      support: await client.emoji("DGH_support"),
-      developers: await client.emoji("DGH_developers"),
-      nitro: await client.emoji("DGH_nitro"),
-      boost: await client.emoji("DGH_boosts"),
-      bot: await client.emoji("DGH_botclassic")
+      brigade: await client.emoji("NOVA_Employee"),
+      partner: await client.emoji("NOVA_Partner"),
+      events: await client.emoji("NOVA_hypesquad"),
+      brillance: await client.emoji("NOVA_hypesquadbrillance"),
+      bravery: await client.emoji("NOVA_hypesquadbravery"),
+      balance: await client.emoji("NOVA_hypesquadbalance"),
+      hunter_gold: await client.emoji("NOVA_huntergold"),
+      hunter: await client.emoji("NOVA_hunter"),
+      support: await client.emoji("NOVA_support"),
+      developers: await client.emoji("NOVA_developers"),
+      nitro: await client.emoji("NOVA_nitro"),
+      boost: await client.emoji("NOVA_boosts"),
+      bot: await client.emoji("NOVA_BOTclassic")
     };
 
     let newbadges = [];

@@ -22,11 +22,11 @@ const {
   giveaway
 } = require("../../config");
 const YoutubePoster = require("discord-yt-poster");
-const { Database } = require("quickmongo");
+const { Database } = require("pg");
 const format = require(`humanize-duration`);
 const moment = require("moment");
 
-module.exports = class DGH_BOT_CLIENT extends Client {
+module.exports = class NOVA_BOT_CLIENT extends Client {
   constructor() {
     super({
       messageCacheLifetime: 60,
@@ -79,20 +79,20 @@ module.exports = class DGH_BOT_CLIENT extends Client {
           new MessageEmbed()
             .setColor("GREEN")
             .setDescription(
-              `${await this.emoji("DGH_success")} ${
+              `${await this.emoji("NOVA_success")} ${
                 this.user.tag
               } is now ${await this.user.presence.status}\n\n${await this.emoji(
-                "DGH_create_at"
+                "NOVA_create_at"
               )} ${moment
-                .tz("Asia/Jakarta")
-                .format("llll")}\n\n${await this.emoji("DGH_role")} Cached ${
+                .tz("America/Chicago")
+                .format("llll")}\n\n${await this.emoji("NOVA_role")} Cached ${
                 this.users.cache.size
               } Users, ${this.channels.cache.size} Channels and ${
                 this.guilds.cache.size
               } Servers `
             )
         ],
-        name: "DGH STATUS"
+        name: "NOVA STATUS"
       });
       let users = 0;
       this.guilds.cache.forEach(x => {

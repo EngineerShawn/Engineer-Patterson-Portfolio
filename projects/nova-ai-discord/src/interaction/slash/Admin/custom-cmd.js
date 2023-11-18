@@ -104,7 +104,7 @@ module.exports = {
         .setFooter(client.user.username)
         .setDescription(
           `${await client.emoji(
-            "DGH_error"
+            "NOVA_error"
           )} | No Custom Command With That Name Exist In Your Guild Data`
         );
 
@@ -126,7 +126,7 @@ module.exports = {
         .setFooter(client.user.username)
         .setTitle(`Deleted`)
         .setDescription(
-          `${await client.emoji("DGH_success")} | Command Deleted`
+          `${await client.emoji("NOVA_success")} | Command Deleted`
         );
 
       interaction.reply({
