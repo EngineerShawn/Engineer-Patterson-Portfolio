@@ -149,9 +149,18 @@ app.get('/oauth2/callback', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    logger.info(`Server running on port ${port}`);
+app.get('/', (request, response) => {
+    return response.sendFile('./index.html', { root: '.' });
+
 });
+
+app.listen(port, () => console.log(`NovaAI is listening on http://localhost:${port}`));
+
+client.once('ready', () => {
+    console.log('NovaAI is Online!');
+});
+
+client.login(process.env.NOVA_BOT_TOKEN);
 
 // Export for testing purposes
 module.exports = app;
