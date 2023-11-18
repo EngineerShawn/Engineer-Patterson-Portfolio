@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "engines": {
-    "node": "21.x"
+    "node": "16.x"
   },
   "author": "Shawn 'EngineerShawn' Patterson",
   "license": "ISC",
