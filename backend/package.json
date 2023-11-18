@@ -31,6 +31,7 @@
     "humanize-duration": "^3.31.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
+    "node": "^21.1.0",
     "node-events": "^0.0.2",
     "node-fetch": "^3.3.2",
     "node-superfetch": "^0.3.3",
