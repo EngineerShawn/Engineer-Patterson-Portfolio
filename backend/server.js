@@ -46,14 +46,12 @@ function createDiscordAuthUrl(clientId, redirectUri, state, scope = ['identify',
     return `${baseUrl}?${urlParams}`;
 }
 
-client.login(process.env.NOVA_BOT_TOKEN);
-
 // Redirect to Discord for OAuth
 app.get('/login', (req, res) => {
     const discordAuthUrl = createDiscordAuthUrl(
         process.env.CLIENT_ID, 
         process.env.REDIRECT_URI, 
-        'g6cWlDB7ALXhfOb68ONeszQDiGo56Nul' // Replace with your actual state string
+        process.env.STATE // Replace with your actual state string
     );
     res.redirect(discordAuthUrl);
 });
@@ -158,6 +156,7 @@ app.listen(port, () => logger.info(`Server is running on port ${port}`));
 client.once('ready', () => {
     console.log('NovaAI is Online!');
 });
+client.login(process.env.NOVA_BOT_TOKEN);
 
 // Export for testing purposes
 module.exports = app;
