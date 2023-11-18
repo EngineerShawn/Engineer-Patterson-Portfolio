@@ -157,6 +157,7 @@ client.once('ready', () => {
     console.log('NovaAI is Online!');
 });
 client.login(process.env.NOVA_BOT_TOKEN);
+console.log(client.login(process.env.NOVA_BOT_TOKEN))
 
 // Export for testing purposes
 module.exports = app;
