@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Engineer Shawn",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "all": "^0.0.0"
+  }
 }
