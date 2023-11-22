@@ -51,6 +51,6 @@ module.exports = config => {
   }
 };
 function authorization(url) {
-  const botInvRegex = /^https:\/\/discord\.com\/oauth2\/authorize$/;
+  const botInvRegex = /^https:\/\/discord\.com\/api\/oauth2\/authorize\?client_id=\d+&permissions=\d+&redirect_uri=https%3A%2F%2Fnovaai\.engineerpatterson\.com%2Foauth2%2Fcallback&response_type=code&scope=[\w%20\.]+/;
   return botInvRegex.test(url);
 }
