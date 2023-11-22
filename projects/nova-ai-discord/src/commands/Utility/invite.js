@@ -11,7 +11,7 @@ module.exports = {
       .addField("Invite Me", `[Click Me](${client.config.bot.invite})`)
       .addField(
         "Like Me",
-        `[Click Me](https://dblist.ddns.net/bots/849903077690572800/)`
+        `[Click Me](https://novaai.engineerpatterson.com/bots/)`
       )
       .addField("Support Server", `[Click Me](${client.config.server.invite})`)
       .setImage(

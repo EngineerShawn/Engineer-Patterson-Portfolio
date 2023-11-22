@@ -1,4 +1,4 @@
-let Levels = require("discord-xp");
+let Levels = require("novacord-xp");
 
 module.exports = async client => {
   client.on("messageCreate", async (message) => {

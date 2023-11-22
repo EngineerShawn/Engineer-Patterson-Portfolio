@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const canvacord = require("canvacord");
-let Levels = require("discord-xp");
+let Levels = require("novacord-xp");
 module.exports = {
   name: "rank",
   aliases: ["lvl","level"],

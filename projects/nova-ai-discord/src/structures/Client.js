@@ -6,11 +6,11 @@ const {
   Message,
   MessageEmbed,
   MessageButton,
-  MessageActionRow
+  MessageActionRow,
 } = require("discord.js");
 const ytdl = require("ytdl-core");
 const fetch = require("node-fetch");
-const dblist = require("dblist.api");
+
 const { GiveawaysManager } = require("discord-giveaways");
 const {
   bot,
@@ -19,11 +19,11 @@ const {
   mod,
   logs,
   status,
-  giveaway
+  giveaway,
 } = require("../../config");
 const YoutubePoster = require("discord-yt-poster");
 const { Pool } = require("pg");
-const url = require('url'); // Node.js built-in module
+const url = require("url"); // Node.js built-in module
 const format = require(`humanize-duration`);
 const moment = require("moment");
 
@@ -38,23 +38,23 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
       shards: "auto",
       allowedMentions: { parse: ["users", "roles"], repliedUser: true },
       partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", 6],
-      intents: Object.keys(Intents.FLAGS).filter(intent => intent.startsWith('GUILD_'))
+      intents: Object.keys(Intents.FLAGS).filter((intent) =>
+        intent.startsWith("GUILD_")
+      ),
     });
 
-            // Parse the connection string
-            const params = url.parse(bot.postgresUrl);
-            const auth = params.auth.split(':');
-    
-            const config = {
-                user: auth[0],
-                password: auth[1],
-                host: params.hostname,
-                port: params.port,
-                database: params.pathname.split('/')[1],
-                ssl: params.hostname !== 'localhost', // Enable SSL if not on localhost
-            };
-    
+    // Parse the connection string
+    const params = url.parse(bot.postgresUrl);
+    const auth = params.auth.split(":");
 
+    const config = {
+      user: auth[0],
+      password: auth[1],
+      host: params.hostname,
+      port: params.port,
+      database: params.pathname.split("/")[1],
+      ssl: params.hostname !== "localhost", // Enable SSL if not on localhost
+    };
 
     /**
      * @constructor
@@ -83,7 +83,6 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
 
   //=================== F U N C T I O N ===================
   async start() {
-    const dbl = new dblist("API", this);
     const { init } = require("./postgres");
     require("./verifyConfig")(this.config);
     init();
@@ -107,12 +106,12 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
               } Users, ${this.channels.cache.size} Channels and ${
                 this.guilds.cache.size
               } Servers `
-            )
+            ),
         ],
-        name: "NOVA STATUS"
+        name: "NOVA STATUS",
       });
       let users = 0;
-      this.guilds.cache.forEach(x => {
+      this.guilds.cache.forEach((x) => {
         users += x.memberCount;
       });
       this.user.setPresence({
@@ -125,14 +124,14 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
               .split("<server>")
               .join(this.guilds.cache.size)
               .split("<user>")
-              .join(users)
-          }
+              .join(users),
+          },
         ],
-        status: this.config.status.stats
+        status: this.config.status.stats,
       });
       require("../dashboard/app")(this);
       require("./SlashCommands")(this);
-      dbl.server_count();
+
     });
   }
   async resolveUser(search) {
@@ -145,12 +144,12 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
         .catch(() => {});
     if (search.match(/^!?(\w+)#(\d+)$/) && !user)
       user = this.users.cache.find(
-        u =>
+        (u) =>
           u.username === search.match(/^!?(\w+)#(\d+)$/)[0] &&
           u.discriminator === search.match(/^!?(\w+)#(\d+)$/)[1]
       );
     if (search.match(/.{2,32}/) && !user)
-      user = this.users.cache.find(u => u.username === search);
+      user = this.users.cache.find((u) => u.username === search);
     if (!user) user = await this.users.fetch(search).catch(() => {});
     return user;
   }
@@ -181,7 +180,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
     let role = null;
     if (search.match(/^<@&!?(\d+)>$/))
       role = guild.roles.cache.get(search.match(/^<@&!?(\d+)>$/)[1]);
-    if (!role) role = guild.roles.cache.find(r => r.name === search);
+    if (!role) role = guild.roles.cache.find((r) => r.name === search);
     if (!role) role = guild.roles.cache.get(search);
     return role;
   }
@@ -200,7 +199,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
         .split(" ")
         .join("")
     );
-    if (!channel) channel = this.channels.cache.find(c => c.name === search);
+    if (!channel) channel = this.channels.cache.find((c) => c.name === search);
     if (!channel) channel = this.channels.cache.get(search);
     return channel;
   }
@@ -251,10 +250,10 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
       color = "BLUE",
       max = 1,
       time = 60000,
-      obj = false
+      obj = false,
     }
   ) {
-    const filter = m => m.author.id === message.author.id;
+    const filter = (m) => m.author.id === message.author.id;
     await message.channel.send({
       embeds: embed
         ? embed
@@ -263,13 +262,13 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
               description: content,
               color: color,
               image: {
-                url: image ? image : null
+                url: image ? image : null,
               },
               footer: {
-                text: `Time: ${format(time)}`
-              }
-            }
-          ]
+                text: `Time: ${format(time)}`,
+              },
+            },
+          ],
     });
 
     try {
@@ -277,7 +276,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
         filter,
         max: max,
         time: time,
-        errors: ["time"]
+        errors: ["time"],
       });
       if (obj) {
         return collected.first();
@@ -296,7 +295,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
       image,
       timeout,
       channel = null,
-      type = null
+      type = null,
     }
   ) {
     let msg = (await type)
@@ -308,19 +307,19 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
                   {
                     author: {
                       icon_url: message.author.displayAvatarURL({
-                        dynamic: true
+                        dynamic: true,
                       }),
-                      name: message.author.username
+                      name: message.author.username,
                     },
                     description: content,
                     color: color,
                     image: {
-                      url: image ? image : null
-                    }
-                  }
-                ]
+                      url: image ? image : null,
+                    },
+                  },
+                ],
           })
-          .then(a => {
+          .then((a) => {
             if (timeout) {
               setTimeout(() => {
                 a.delete();
@@ -335,19 +334,19 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
                   {
                     author: {
                       icon_url: message.author.displayAvatarURL({
-                        dynamic: true
+                        dynamic: true,
                       }),
-                      name: message.author.username
+                      name: message.author.username,
                     },
                     description: content,
                     color: color,
                     image: {
-                      url: image ? image : null
-                    }
-                  }
-                ]
+                      url: image ? image : null,
+                    },
+                  },
+                ],
           })
-          .then(a => {
+          .then((a) => {
             if (timeout) {
               setTimeout(() => {
                 a.delete();
@@ -365,21 +364,29 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
       channel,
       embed = null,
       name = "NovaAI",
-      avatar = this.user.displayAvatarURL()
+      avatar = this.user.displayAvatarURL(),
     }
   ) {
-    if (!channel || typeof channel !== "string")
+    if (!channel || typeof channel !== "string") {
       throw new SyntaxError("Invaild Channel");
+    }
     const channel_ = await this.resolveChannel(channel);
-    let webhook = await channel_.fetchWebhooks().then(x => x.find(x => x.name === name));
-    if (!webhook)
-        webhook = await channel_.createWebhook(name, {avatar});
+    if (!channel_) {
+      console.error(`Channel not found: ${channel}`);
+      return; // Exit the function if channel is not found
+    }
+    let webhook = await channel_.fetchWebhooks().then((x) => x.find((x) => x.name === name));
+    if (!webhook) webhook = await channel_.createWebhook(name, { avatar });
     return await webhook.send(embed ? { embeds: embed } : msg).then(e => {
-      remove ? webhook.delete() : e;
+      if (remove) {
+        webhook.delete();
+      } else {
+        return e;
+      }
     });
   }
   async emoji(name, option) {
-    let emojis = this.emojis.cache.find(x => x.name === name);
+    let emojis = this.emojis.cache.find((x) => x.name === name);
     if (!emojis) return `:${name}:`;
     if (option === "id") {
       return emojis.id;

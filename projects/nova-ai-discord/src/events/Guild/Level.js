@@ -1,5 +1,5 @@
 let Discord = require("discord.js");
-let Levels = require("discord-xp");
+let Levels = require("novacord-xp");
 const canvacord = require("canvacord");
 
 module.exports = async client => {

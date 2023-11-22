@@ -1,4 +1,4 @@
-let Levels = require("discord-xp");
+let Levels = require("novacord-xp");
 module.exports = {
   name: "view-message",
   description: "view Message Welcome, level",

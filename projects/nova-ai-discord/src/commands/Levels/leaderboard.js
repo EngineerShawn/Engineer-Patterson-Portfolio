@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-const Levels = require("discord-xp");
+const Levels = require("novacord-xp");
 const Canvas = require("canvas");
 module.exports = {
   name: "leaderboard",

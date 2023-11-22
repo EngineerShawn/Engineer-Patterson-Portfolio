@@ -4,7 +4,7 @@ require('dotenv').config({path: '../../.env'});
 module.exports = {
   bot: {
     token: process.env.NOVA_BOT_TOKEN, //Bot Token from https://discord.com/developers/applications
-    prefix: "!", //Bot Prefix
+    prefix: "/", //Bot Prefix
     owners: ["915420974873210890"], //Bot Onwer ID
     maintenance: false,
     postgresUrl: process.env.DATABASE_URL, 
@@ -23,7 +23,7 @@ module.exports = {
   dash: {
     secret: process.env.CLIENT_SECRET, //SECRET Bot
     id: "1172432649307037787", //ID Bot
-    url: "https://discord.com/oauth2/authorize" //URL
+    url: 'http://localhost:3000' //URL
   },
   server: {
     id: "1172442013543698483", //Server ID
@@ -45,16 +45,16 @@ module.exports = {
       "https://i.pinimg.com/736x/d1/00/7b/d1007b46e6175f49f53712f16e4f6a3c.jpg" //Image Leaderboard Card
   },
   mod: {
-    muted_defauld: "Muted", // bot will make Roles muted for members who got muted
+    muted_default: "Muted", // bot will make Roles muted for members who got muted
     limit_warn: 3, //bot will kick member if it has 3 warns
     limit_muted: 5 //bot will kick member if it has 5 Muted
   },
   logs: {
-    boton: "1175424494945448046", //Channel ID Bot Online
-    botadd: "1175424614541840414", //Channel ID Bot Add In Guild
-    botdel: "1175424614541840414", //Channel ID Bot Remove in Guild
-    botreport: "1175424614541840414",
-    boterror: "1175424614541840414"
+    boton: "", //Channel ID Bot Online
+    botadd: "", //Channel ID Bot Add In Guild
+    botdel: "", //Channel ID Bot Remove in Guild
+    botreport: "",
+    boterror: ""
   },
   giveaway: {
     default: {
@@ -68,4 +68,4 @@ module.exports = {
     }
   }
 };
-// console.log(module.exports.bot);
+console.log(module.exports.bot);

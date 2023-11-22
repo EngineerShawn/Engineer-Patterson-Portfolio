@@ -46,6 +46,7 @@ function createDiscordAuthUrl(clientId, redirectUri, state, scope = ['identify',
     return `${baseUrl}?${urlParams}`;
 }
 
+
 // Redirect to Discord for OAuth
 app.get('/oauth2/authorize', (req, res) => {
     const discordAuthUrl = createDiscordAuthUrl(
@@ -159,4 +160,4 @@ client.once('ready', () => {
 client.login(process.env.NOVA_BOT_TOKEN);
 
 // // Export for testing purposes
-// module.exports = app;
+module.exports = app;
