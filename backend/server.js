@@ -2,7 +2,6 @@ const express = require('express');
 const axios = require('axios');
 const { Pool } = require('pg');
 const winston = require('winston');
-import EventEmitter from 'node:events';
 const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 require('dotenv').config({path: '../.env'});

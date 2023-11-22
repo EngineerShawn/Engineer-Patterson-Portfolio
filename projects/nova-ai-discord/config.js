@@ -1,5 +1,6 @@
 const path = require('path');
 require('dotenv').config({path: '../../.env'});
+// console.log(process.env.DATABASE_URL);
 module.exports = {
   bot: {
     token: process.env.NOVA_BOT_TOKEN, //Bot Token from https://discord.com/developers/applications
@@ -67,3 +68,4 @@ module.exports = {
     }
   }
 };
+// console.log(module.exports.bot);

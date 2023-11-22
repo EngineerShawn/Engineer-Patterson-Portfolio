@@ -22,7 +22,8 @@ const {
   giveaway
 } = require("../../config");
 const YoutubePoster = require("discord-yt-poster");
-const { Database } = require("pg");
+const { Pool } = require("pg");
+const url = require('url'); // Node.js built-in module
 const format = require(`humanize-duration`);
 const moment = require("moment");
 
@@ -37,8 +38,24 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
       shards: "auto",
       allowedMentions: { parse: ["users", "roles"], repliedUser: true },
       partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"],
-      intents: Object.keys(Intents.FLAGS).filter(f => f.startsWith("GUILD"))
+      intents: Object.keys(Intents.FLAGS).filter(intent => intent.startsWith('GUILD_'))
     });
+
+            // Parse the connection string
+            const params = url.parse(bot.postgresUrl);
+            const auth = params.auth.split(':');
+    
+            const config = {
+                user: auth[0],
+                password: auth[1],
+                host: params.hostname,
+                port: params.port,
+                database: params.pathname.split('/')[1],
+                ssl: params.hostname !== 'localhost', // Enable SSL if not on localhost
+            };
+    
+
+
     /**
      * @constructor
      * @param  {discord.Client} client
@@ -55,7 +72,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
     this.config = require("../../config");
     this.image = require("./Other/image");
     this.Discord = require("discord.js");
-    this.data = new Database(bot.postgresUrl);
+    this.pool = new Pool(config);
     this.db = require("quick.db");
     this.YTP = new YoutubePoster(this);
     this.ops = require("./Other/options");
