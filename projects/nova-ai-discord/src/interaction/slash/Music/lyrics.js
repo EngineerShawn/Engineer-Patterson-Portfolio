@@ -8,7 +8,7 @@ module.exports = {
       name: "song-name",
       description: "The name of the song",
       required: true,
-      type: "STRING"
+      type: 3
     }
   ],
   execute: async (client, interaction, options) => {

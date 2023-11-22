@@ -37,7 +37,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
       restWsBridgetimeout: 100,
       shards: "auto",
       allowedMentions: { parse: ["users", "roles"], repliedUser: true },
-      partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"],
+      partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", 6],
       intents: Object.keys(Intents.FLAGS).filter(intent => intent.startsWith('GUILD_'))
     });
 
@@ -364,16 +364,14 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
       remove = false,
       channel,
       embed = null,
-      name = "DGH HOOK",
+      name = "NovaAI",
       avatar = this.user.displayAvatarURL()
     }
   ) {
     if (!channel || typeof channel !== "string")
       throw new SyntaxError("Invaild Channel");
     const channel_ = await this.resolveChannel(channel);
-    let webhook = await channel_
-      .fetchWebhooks()
-      .then(x => x.find(x => x.name === name));
+    let webhook = await channel_.fetchWebhooks().then(x => x.find(x => x.name === name));
     if (!webhook)
         webhook = await channel_.createWebhook(name, {avatar});
     return await webhook.send(embed ? { embeds: embed } : msg).then(e => {

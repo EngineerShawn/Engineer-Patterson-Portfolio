@@ -4,13 +4,13 @@ module.exports = {
   description: "Create a source from the code and it will be uploaded to the hastebin web",
   options: [
     {
-      type: "STRING",
+      type: 3,
       name: "name_code",
       description: "What is the name of the source?",
       required: true
     },
     {
-      type: "STRING",
+      type: 3,
       name: "language_code",
       description: "What is the language in the source?",
       required: true,
@@ -54,13 +54,13 @@ module.exports = {
       ]
     },
     {
-      type: "STRING",
+      type: 3,
       name: "code_type",
       description: "What's the source?",
       required: true
     },
     {
-      type: "STRING",
+      type: 3,
       name: "description_code",
       description: "What is the description of the source?",
       required: false

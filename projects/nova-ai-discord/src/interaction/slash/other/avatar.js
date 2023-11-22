@@ -3,7 +3,7 @@ module.exports = {
   description: "Avatar Of Discord User!",
   options: [
     {
-      type: "USER",
+      type: 6,
       name: "target",
       description: "Target User (ID or @user)",
       required: false

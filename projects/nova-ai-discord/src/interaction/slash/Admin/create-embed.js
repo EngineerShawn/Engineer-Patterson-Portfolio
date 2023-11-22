@@ -1,3 +1,12 @@
+/**
+ *  Note: the Integer types needed below are one of the below:
+ * - 1: SUB_COMMAND             - 7: CHANNEL
+ * - 2: SUB_COMMAND_GROUP       - 8: ROLE
+ * - 3: STRING                  - 9: MENTIONABLE
+ * - 4: INTEGER                 - 10: NUMBER
+ * - 5: BOOLEAN                 - 11: MENTION_USER
+ * - 6: USER                         
+ */
 let discord = require("discord.js");
 module.exports = {
   name: "embed",
@@ -7,22 +16,22 @@ module.exports = {
     {
       name: "create",
       description: "create a embed",
-      type: "SUB_COMMAND",
+      type: 1,
       options: [
         {
-          type: "CHANNEL",
+          type: 7,
           name: "channel",
           description: "What channel do you want your embed to be in?",
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "title",
           description: "What title do you want for the embed?",
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "color",
           description: "Thats's a nice title! now what color do you want?",
           required: true,
@@ -130,19 +139,19 @@ module.exports = {
           ]
         },
         {
-          type: "STRING",
+          type: 3,
           name: "description",
           description: "now what do you want the description to be?",
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "footer",
           description: "Now, what do you want the footer to be?",
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "timestamp",
           description:
             "Do you want a timestamp? Type \\`yes\\` if you do, and type \\`no\\` if you don't.",
@@ -159,19 +168,19 @@ module.exports = {
           ]
         },
         {
-          type: "STRING",
+          type: 3,
           name: "image",
           description: "Now you use the image otherwise just leave it",
           required: false
         },
         {
-          type: "STRING",
+          type: 3,
           name: "thumbnails",
           description: "Now you use the thumbnails otherwise just leave it",
           required: false
         },
         {
-          type: "STRING",
+          type: 3,
           name: "msg",
           description:
             "Now you just add the above message after embed otherwise you just leave it",
@@ -181,23 +190,23 @@ module.exports = {
     },
     {
       name: "edit",
-      type: "SUB_COMMAND",
+      type: 1,
       description: "Edit a Embed",
       options: [
         {
           name: "url",
           description: "Url message or share url in message paste here",
-          type: "STRING",
+          type: 3,
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "title",
           description: "What title do you want for the embed?",
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "color",
           description: "Thats's a nice title! now what color do you want?",
           required: true,
@@ -305,19 +314,19 @@ module.exports = {
           ]
         },
         {
-          type: "STRING",
+          type: 3,
           name: "description",
           description: "now what do you want the description to be?",
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "footer",
           description: "Now, what do you want the footer to be?",
           required: true
         },
         {
-          type: "STRING",
+          type: 3,
           name: "timestamp",
           description:
             "Do you want a timestamp? Type \\`yes\\` if you do, and type \\`no\\` if you don't.",
@@ -334,19 +343,19 @@ module.exports = {
           ]
         },
         {
-          type: "STRING",
+          type: 3,
           name: "image",
           description: "Now you use the image otherwise just leave it",
           required: false
         },
         {
-          type: "STRING",
+          type: 3,
           name: "thumbnails",
           description: "Now you use the thumbnails otherwise just leave it",
           required: false
         },
         {
-          type: "STRING",
+          type: 3,
           name: "msg",
           description:
             "Now you just add the above message after embed otherwise you just leave it",

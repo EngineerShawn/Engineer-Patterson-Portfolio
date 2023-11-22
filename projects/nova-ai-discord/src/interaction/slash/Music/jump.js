@@ -6,7 +6,7 @@ module.exports = {
     {
       name: "number",
       description: "Jump To Music",
-      type: "INTEGER",
+      type: 4,
       required: true
     }
   ],

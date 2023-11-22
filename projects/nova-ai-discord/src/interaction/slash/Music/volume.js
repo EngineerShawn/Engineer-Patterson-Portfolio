@@ -6,7 +6,7 @@ module.exports = {
     {
       name: "volume",
       description: "Set volume Music",
-      type: "INTEGER",
+      type: 4,
       required: true
     }
   ],

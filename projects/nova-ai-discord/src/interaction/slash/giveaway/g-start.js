@@ -7,25 +7,25 @@ module.exports = {
       name: "duration",
       description:
         "How long the giveaway should last for. Example values: 1m, 1h, 1d",
-      type: "STRING",
+      type: 3,
       required: true
     },
     {
       name: "winners",
       description: "How many winners the giveaway should have",
-      type: "INTEGER",
+      type: 4,
       required: true
     },
     {
       name: "prize",
       description: "What the prize of the giveaway should be",
-      type: "STRING",
+      type: 3,
       required: true
     },
     {
       name: "channel",
       description: "The channel to start the giveaway in",
-      type: "CHANNEL",
+      type: 7,
       required: true
     }
   ],

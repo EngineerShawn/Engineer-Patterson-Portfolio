@@ -6,7 +6,7 @@ module.exports = {
     {
       name: "song",
       description: "Song Name",
-      type: "STRING",
+      type: 3,
       required: true
     }
   ],

@@ -7,7 +7,7 @@ module.exports = {
     {
       name: "number",
       description: "Remove Queue",
-      type: "INTEGER",
+      type: 4,
       required: true
     }
   ],

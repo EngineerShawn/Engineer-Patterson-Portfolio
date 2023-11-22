@@ -1,3 +1,12 @@
+/**
+ *  Note: the Integer types needed below are one of the below:
+ * - 1: SUB_COMMAND             - 7: CHANNEL
+ * - 2: SUB_COMMAND_GROUP       - 8: ROLE
+ * - 3: STRING                  - 9: MENTIONABLE
+ * - 4: INTEGER                 - 10: NUMBER
+ * - 5: BOOLEAN                 - 11: MENTION_USER
+ * - 6: USER                         
+ */
 module.exports = {
   name: "drop-giveaway",
   description: "Create a drop giveaway!",
@@ -5,19 +14,19 @@ module.exports = {
     {
       name: "winners",
       description: "How many winners the giveaway should have",
-      type: "INTEGER",
+      type: 4,
       required: true
     },
     {
       name: "prize",
       description: "What the prize of the giveaway should be",
-      type: "STRING",
+      type: 3,
       required: true
     },
     {
       name: "channel",
       description: "The channel to start the giveaway in",
-      type: "CHANNEL",
+      type: 7,
       required: true
     }
   ],

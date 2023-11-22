@@ -4,7 +4,7 @@ require('dotenv').config({path: '../../.env'});
 module.exports = {
   bot: {
     token: process.env.NOVA_BOT_TOKEN, //Bot Token from https://discord.com/developers/applications
-    prefix: "/", //Bot Prefix
+    prefix: "!", //Bot Prefix
     owners: ["915420974873210890"], //Bot Onwer ID
     maintenance: false,
     postgresUrl: process.env.DATABASE_URL, 
@@ -21,9 +21,9 @@ module.exports = {
     name: "Playing" //Status Playing
   },
   dash: {
-    secret: "", //SECRET Bot
-    id: "", //ID Bot
-    url: "" //URL
+    secret: process.env.CLIENT_SECRET, //SECRET Bot
+    id: "1172432649307037787", //ID Bot
+    url: "https://discord.com/oauth2/authorize" //URL
   },
   server: {
     id: "1172442013543698483", //Server ID

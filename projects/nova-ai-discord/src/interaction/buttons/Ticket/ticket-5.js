@@ -8,7 +8,7 @@ module.exports = {
       embeds: [
         new client.Discord.MessageEmbed()
           .setColor("RED")
-          .setDescription(`Ticket Opens by ${interaction.user}`)
+          .setDescription(`Ticket Opened by ${interaction.user}`)
       ]
     });
     chs.permissionOverwrites

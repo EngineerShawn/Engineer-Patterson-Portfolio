@@ -1,3 +1,14 @@
+/**
+ *  Note: the Integer types needed below are one of the below:
+ * - 1: SUB_COMMAND             - 7: CHANNEL
+ * - 2: SUB_COMMAND_GROUP       - 8: ROLE
+ * - 3: STRING                  - 9: MENTIONABLE
+ * - 4: INTEGER                 - 10: NUMBER
+ * - 5: BOOLEAN                 - 11: MENTION_USER
+ * - 6: USER                         
+ */
+
+
 const ms = require("ms");
 
 module.exports = {
@@ -7,7 +18,7 @@ module.exports = {
     {
       name: "giveaway",
       description: "The giveaway to end (message ID or giveaway prize)",
-      type: "STRING",
+      type: 3,
       required: true
     }
   ],

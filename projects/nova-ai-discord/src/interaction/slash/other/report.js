@@ -5,7 +5,7 @@ module.exports = {
     {
       name: "bug",
       description: "Give error messages to bots or commands",
-      type: "STRING",
+      type: 3,
       required: true
     }
   ],

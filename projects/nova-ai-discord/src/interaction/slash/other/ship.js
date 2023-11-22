@@ -9,13 +9,13 @@ module.exports = {
     {
       name: "one",
       description: "The first user",
-      type: "USER",
+      type: 6,
       required: true
     },
     {
       name: "two",
       description: "The second user",
-      type: "USER",
+      type: 6,
       required: true
     }
   ],

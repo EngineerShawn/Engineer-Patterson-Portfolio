@@ -5,7 +5,7 @@ module.exports = {
     {
       name: "giveaway",
       description: "The giveaway to reroll (message ID or prize)",
-      type: "STRING",
+      type: 3,
       required: true
     }
   ],

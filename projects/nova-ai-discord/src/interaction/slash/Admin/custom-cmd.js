@@ -1,3 +1,13 @@
+/**
+ *  Note: the Integer types needed below are one of the below:
+ * - 1: SUB_COMMAND             - 7: CHANNEL
+ * - 2: SUB_COMMAND_GROUP       - 8: ROLE
+ * - 3: STRING                  - 9: MENTIONABLE
+ * - 4: INTEGER                 - 10: NUMBER
+ * - 5: BOOLEAN                 - 11: MENTION_USER
+ * - 6: USER                         
+ */
+
 const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "custom",
@@ -6,24 +16,24 @@ module.exports = {
     {
       name: "create",
       description: "create a custom command",
-      type: "SUB_COMMAND",
+      type: 1,
       options: [
         {
           name: "command",
           description: "name of the custom command",
-          type: "STRING",
+          type: 3,
           required: true
         },
         {
           name: "response",
           description: "The response of the command",
-          type: "STRING",
+          type: 3,
           required: true
         },
         {
           name: "type",
           description: "Embed or Default of the custom command",
-          type: "STRING",
+          type: 3,
           required: true,
           choices: [
             {
@@ -36,13 +46,13 @@ module.exports = {
     },
     {
       name: "delete",
-      type: "SUB_COMMAND",
+      type: 1, // the Integer 1 is the SUB_COMMAND_GROUP type
       description: "Delete a custom command",
       options: [
         {
           name: "command",
           description: "name of the custom command",
-          type: "STRING",
+          type: 3, // the Integer 3 is the STRING type
           required: true
         }
       ]

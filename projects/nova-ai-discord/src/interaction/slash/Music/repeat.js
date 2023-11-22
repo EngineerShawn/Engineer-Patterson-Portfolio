@@ -6,7 +6,7 @@ module.exports = {
     {
       name: "onoff",
       description: "On Or Off",
-      type: "BOOLEAN",
+      type: 5,
       required: true
     }
   ],
