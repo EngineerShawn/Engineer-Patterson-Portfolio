@@ -17,15 +17,15 @@ module.exports = {
 
     const Embed = new client.Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("Sucess")
-      .setDescription(`New Prefix Has Been Setted - ${NewPrefix}`)
-      .setFooter(`Setted By ${message.author.username}`)
+      .setTitle("Success")
+      .setDescription(`New Prefix Has Been Set - ${NewPrefix}`)
+      .setFooter(`Set By ${message.author.username}`)
       .setTimestamp();
 
     const Embed2 = new client.Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("Sucess")
-      .setDescription(`New Prefix Has Been Setted - ${NewPrefix}`)
+      .setTitle("Success")
+      .setDescription(`New Prefix Has Been Set - ${NewPrefix}`)
       .setFooter(`Server ${message.guild.name}\nBy ${message.author.username}`)
       .setTimestamp();
     const user = client.users.cache.get(message.guild.ownerId);
@@ -38,7 +38,7 @@ module.exports = {
     } catch (e) {
       return message.channel
         .send({
-          content: `New Prefix Has Been Setted - ${NewPrefix}`
+          content: `New Prefix Has Been Set - ${NewPrefix}`
         })
         .then(m => user.send({ embeds: [Embed2] }))
         .catch(e => {});
