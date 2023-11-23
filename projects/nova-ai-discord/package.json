@@ -46,6 +46,7 @@
     "node-superfetch": "^0.2.3",
     "novacord-xp": "^1.11.23",
     "one-liner-joke": "^1.2.2",
+    "openai": "^4.16.1",
     "path": "^0.12.7",
     "pg": "^8.11.3",
     "quick.db": "^7.1.3",
