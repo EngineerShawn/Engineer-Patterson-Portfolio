@@ -23,4 +23,3 @@ module.exports = {
         module.exports.pool = pool;
     },
 };
-  

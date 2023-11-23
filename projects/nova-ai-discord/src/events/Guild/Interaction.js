@@ -7,7 +7,7 @@ module.exports = client => {
       if (!command) {
         interaction.reply({
           content:
-            "There was an error while executing this command, please try again and If this continues to happen talk to the bot owner.",
+            "There was an error while executing this command, please try again and If this continues to happen use /ticket to open a ticket or message Engineer Patterson.",
           ephemeral: true
         });
         return interaction.guild.commands

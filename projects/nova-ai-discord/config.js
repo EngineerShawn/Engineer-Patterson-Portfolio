@@ -5,7 +5,7 @@ module.exports = {
   bot: {
     token: process.env.NOVA_BOT_TOKEN, //Bot Token from https://discord.com/developers/applications
     prefix: "/", //Bot Prefix
-    owners: ["915420974873210890"], //Bot Onwer ID
+    owners: ["915420974873210890"], //Bot Owner ID
     maintenance: false,
     postgresUrl: process.env.DATABASE_URL, 
     invite:
@@ -23,7 +23,7 @@ module.exports = {
   dash: {
     secret: process.env.CLIENT_SECRET, //SECRET Bot
     id: "1172432649307037787", //ID Bot
-    url: 'http://localhost:3000' //URL
+    url: 'https://novaai.engineerpatterson.com' //URL
   },
   server: {
     id: "1172442013543698483", //Server ID
@@ -50,11 +50,11 @@ module.exports = {
     limit_muted: 5 //bot will kick member if it has 5 Muted
   },
   logs: {
-    boton: "", //Channel ID Bot Online
-    botadd: "", //Channel ID Bot Add In Guild
-    botdel: "", //Channel ID Bot Remove in Guild
-    botreport: "",
-    boterror: ""
+    boton: "1175424494945448046", //Channel ID Bot Online
+    botadd: "1175424614541840414", //Channel ID Bot Add In Guild
+    botdel: "1175424614541840414", //Channel ID Bot Remove in Guild
+    botreport: "1176994591052927046", // Channel ID Bot Reports
+    boterror: "1175424494945448046" // Error Channel
   },
   giveaway: {
     default: {

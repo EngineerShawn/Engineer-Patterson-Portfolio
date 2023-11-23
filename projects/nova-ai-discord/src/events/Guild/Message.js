@@ -169,8 +169,8 @@ module.exports = client => {
         return message.channel
           .send({ embeds: [errrr], ephemeral: true })
           .then(m => {
-            client.sendhook(null, {
-              channel: client.config.logs.boterror,
+            client.sendhook(message, {
+              channel: "1172442306117369987",
               embed: [errrr],
               name: "Notifications NOVA AI"
             });

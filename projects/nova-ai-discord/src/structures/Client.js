@@ -89,7 +89,7 @@ module.exports = class NOVA_BOT_CLIENT extends Client {
     super.login(bot.token);
     this.on("ready", async () => {
       console.log(`Bot Is Ready To Go!\nTag: ${this.user.tag}`);
-      this.sendhook(null, {
+      this.sendhook(message, {
         channel: logs.boton,
         embed: [
           new MessageEmbed()

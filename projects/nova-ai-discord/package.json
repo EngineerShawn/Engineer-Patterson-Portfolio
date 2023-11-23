@@ -23,7 +23,7 @@
     "common-tags": "^1.8.0",
     "dbd-capriham-theme": "github:Sintya4/dbd-capriham-theme",
     "discord-backup": "^3.0.1",
-    "discord-dashboard": "github:Sintya4/discord-dashboard",
+    "discord-dashboard": "github:EngineerShawn/novacord-dashboard",
     "discord-giveaways": "^5.0.0",
     "discord-interactions": "^3.4.0",
     "discord-webhooks": "^1.0.0",
